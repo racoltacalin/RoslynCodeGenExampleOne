@@ -27,8 +27,8 @@ namespace RoslynCodeGenExample
 
             var ns = NamespaceDeclaration(ParseName("CodeGen")).AddMembers(members);
 
-            Directory.CreateDirectory(@"C:\Users\calin.racolta\Desktop\CodeGeneratedFromGenerator");
-            await using var streamWriter = new StreamWriter(@"C:\Users\calin.racolta\Desktop\CodeGeneratedFromGenerator\generated.cs", false);
+            Directory.CreateDirectory(@"C:\Users\calin.racolta\Desktop\New folder\RoslynCodeGenExampleOne\RoslynCodeGenExample\GeneratedCode");
+            await using var streamWriter = new StreamWriter(@"C:\Users\calin.racolta\Desktop\New folder\RoslynCodeGenExampleOne\RoslynCodeGenExample\GeneratedCode\generated.cs", false);
             ns.NormalizeWhitespace().WriteTo(streamWriter);
 
             static ClassDeclarationSyntax CreateClass(string name) =>
